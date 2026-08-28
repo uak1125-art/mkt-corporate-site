@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" width="1600" height="1000">
+  <defs>
+    <pattern id="p" width="28" height="28" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <rect width="28" height="28" fill="#E4DACA"/>
+      <rect width="14" height="28" fill="#DCD0BC"/>
+    </pattern>
+  </defs>
+  <rect width="1600" height="1000" fill="url(#p)"/>
+  <rect x="24" y="24" width="1552" height="952" fill="none" stroke="#17364A" stroke-opacity="0.28" stroke-width="2"/>
+  <text x="800" y="482" text-anchor="middle" font-family="Jost, Helvetica, sans-serif" font-size="47" letter-spacing="6" fill="#17364A" fill-opacity="0.55">HERO</text>
+  <text x="800" y="540" text-anchor="middle" font-family="Hiragino Kaku Gothic ProN, Meiryo, sans-serif" font-size="62" fill="#17364A" fill-opacity="0.8">大分の街・朝の風景 ③</text>
+  <text x="800" y="592" text-anchor="middle" font-family="Jost, Helvetica, sans-serif" font-size="31" fill="#17364A" fill-opacity="0.45">hero-03.jpg / 1600×1000</text>
+</svg>

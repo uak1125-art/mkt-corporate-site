@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 700" width="900" height="700">
+  <defs>
+    <pattern id="p" width="28" height="28" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <rect width="28" height="28" fill="#E4DACA"/>
+      <rect width="14" height="28" fill="#DCD0BC"/>
+    </pattern>
+  </defs>
+  <rect width="900" height="700" fill="url(#p)"/>
+  <rect x="24" y="24" width="852" height="652" fill="none" stroke="#17364A" stroke-opacity="0.28" stroke-width="2"/>
+  <text x="450" y="332" text-anchor="middle" font-family="Jost, Helvetica, sans-serif" font-size="26" letter-spacing="6" fill="#17364A" fill-opacity="0.55">PHOTO</text>
+  <text x="450" y="390" text-anchor="middle" font-family="Hiragino Kaku Gothic ProN, Meiryo, sans-serif" font-size="35" fill="#17364A" fill-opacity="0.8">Web制作・運用</text>
+  <text x="450" y="442" text-anchor="middle" font-family="Jost, Helvetica, sans-serif" font-size="17" fill="#17364A" fill-opacity="0.45">sub-web.jpg / 900×700</text>
+</svg>

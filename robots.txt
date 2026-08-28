@@ -1,0 +1,9 @@
+# 確認用公開のため全クロールを拒否
+# ▼ 本番公開時は下記2行を削除し、Sitemap行を有効にする
+User-agent: *
+Disallow: /
+
+# 本番公開時はここまでを消して、以下を有効にする
+# User-agent: *
+# Allow: /
+# Sitemap: https://（本番ドメイン）/sitemap.xml

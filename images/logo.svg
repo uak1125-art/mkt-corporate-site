@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 96" width="96" height="96" role="img" aria-label="MKT">
+  <!-- 暫定ロゴマーク（正式ロゴが用意でき次第、同名ファイルで差し替え） -->
+  <circle cx="48" cy="48" r="45" fill="none" stroke="#17364A" stroke-width="2"/>
+  <!-- 荷物＝積み重なる信頼 -->
+  <rect x="27" y="47" width="20" height="20" fill="#17364A"/>
+  <rect x="49" y="47" width="20" height="20" fill="none" stroke="#17364A" stroke-width="2"/>
+  <rect x="38" y="27" width="20" height="18" fill="none" stroke="#17364A" stroke-width="2"/>
+  <!-- 前へ進む一点 -->
+  <circle cx="48" cy="36" r="4" fill="#C86B32"/>
+</svg>
