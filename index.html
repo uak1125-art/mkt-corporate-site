@@ -6,7 +6,7 @@
 <title>合同会社MKT｜大分の軽貨物配送・信じる力で、人と地域の未来を支える。</title>
 <meta name="description" content="合同会社MKTは大分市を拠点に、軽貨物配送を軸として中古車販売・Web制作・SNS運用・美容・飲食を展開する会社です。「信じる力で、人と地域の未来を支える。」を掲げ、人に投資する経営を続けています。">
 <meta name="theme-color" content="#17364A">
-<!-- ▼ 確認用公開のためインデックス拒否。本番公開時にこの1行を削除する（robots.txt / _headers も同時に） -->
+<!-- ▼ 確認用公開のためインデックス拒否。本番公開時にこの1行を削除する（robots.txt も同時に） -->
 <meta name="robots" content="noindex, nofollow">
 <meta property="og:type" content="website">
 <meta property="og:title" content="合同会社MKT｜信じる力で、人と地域の未来を支える。">
@@ -15,7 +15,7 @@
 <meta property="og:locale" content="ja_JP">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600&family=Zen+Maru+Gothic:wght@500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Jost:wght@200;300;400;500&family=Zen+Maru+Gothic:wght@500;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
 <script>document.documentElement.classList.add('js');</script>
 </head>
@@ -23,491 +23,523 @@
 
 <a class="skip-link" href="#main">本文へスキップ</a>
 
-<!-- ============ イントロ演出（初回訪問のみ） ============ -->
-<div class="intro" id="intro" aria-hidden="true">
-  <div class="intro__bg"></div>
-  <div class="intro__inner">
-    <div class="intro__logo">
-      <img src="images/logo.svg" alt="" onerror="this.remove()">
-      <span class="intro__logo-text">MKT</span>
-    </div>
-    <p class="intro__tag"><span>信じる力で、</span><span>人と地域の未来を支える。</span></p>
+<!-- ============ ローダー ============ -->
+<div class="loader" id="loader" aria-hidden="true">
+  <div class="loader__bg"></div>
+  <div class="loader__body">
+    <p class="loader__mark">MKT</p>
+    <p class="loader__tag">信じる力で、人と地域の未来を支える。</p>
   </div>
+  <p class="loader__count"><span id="loaderNum">0</span><i>%</i></p>
   <div class="splay">
-    <div class="splay__child"></div>
-    <div class="splay__child"></div>
-    <div class="splay__child"></div>
-    <div class="splay__child"></div>
+    <span></span><span></span><span></span><span></span><span></span>
   </div>
 </div>
 
+<!-- ============ カスタムカーソル（PCのみ） ============ -->
+<div class="cursor" id="cursor" aria-hidden="true"><span class="cursor__label"></span></div>
+
 <!-- ============ ヘッダー ============ -->
-<header class="l-header" id="header">
-  <a class="l-header__logo" href="#top" aria-label="合同会社MKT ホーム">
-    <img src="images/logo.svg" alt="合同会社MKT" onerror="this.remove()">
-    <span class="l-header__logo-text">
-      <strong>MKT</strong>
-      <small>合同会社エムケーティー</small>
-    </span>
+<header class="hd" id="header">
+  <a class="hd__logo" href="#top" aria-label="合同会社MKT ホーム">
+    <img src="images/logo.svg" alt="" onerror="this.remove()">
+    <span class="hd__logo-text">MKT</span>
   </a>
 
-  <nav class="l-header__nav" id="gnav" aria-label="メインナビゲーション">
-    <ul class="gnav__list">
-      <li><a href="#about"><span class="en">About</span><span class="jp">私たちについて</span></a></li>
-      <li><a href="#business"><span class="en">Business</span><span class="jp">事業内容</span></a></li>
-      <li><a href="#philosophy"><span class="en">Philosophy</span><span class="jp">理念</span></a></li>
-      <li><a href="#people"><span class="en">People</span><span class="jp">人と組織</span></a></li>
-      <li><a href="#company"><span class="en">Company</span><span class="jp">会社概要</span></a></li>
+  <nav class="hd__nav" id="gnav" aria-label="メインナビゲーション">
+    <ul class="gnav">
+      <li style="--i:0"><a href="#about"><i>01</i><span class="en">About</span><span class="jp">私たちについて</span></a></li>
+      <li style="--i:1"><a href="#business"><i>02</i><span class="en">Business</span><span class="jp">事業内容</span></a></li>
+      <li style="--i:2"><a href="#philosophy"><i>03</i><span class="en">Philosophy</span><span class="jp">理念</span></a></li>
+      <li style="--i:3"><a href="#message"><i>04</i><span class="en">Message</span><span class="jp">代表メッセージ</span></a></li>
+      <li style="--i:4"><a href="#company"><i>05</i><span class="en">Company</span><span class="jp">会社概要</span></a></li>
     </ul>
     <div class="gnav__foot">
-      <a class="btn btn--ghost" href="https://mkt-company.studio.site/" target="_blank" rel="noopener">採用情報を見る</a>
-      <a class="btn btn--amber" href="#contact">お問い合わせ</a>
+      <a href="https://mkt-company.studio.site/" target="_blank" rel="noopener">採用特設サイト ↗</a>
+      <a href="tel:0975944466">097-594-4466</a>
     </div>
   </nav>
 
-  <div class="l-header__actions">
-    <a class="btn btn--ghost is-desktop" href="https://mkt-company.studio.site/" target="_blank" rel="noopener">採用情報</a>
-    <a class="btn btn--amber is-desktop" href="#contact">お問い合わせ</a>
+  <div class="hd__right">
+    <a class="hd__cta" href="#contact" data-cursor="お問い合わせ">
+      <span>Contact</span>
+    </a>
     <button class="burger" id="burger" aria-expanded="false" aria-controls="gnav" aria-label="メニューを開く">
       <span></span><span></span>
     </button>
   </div>
 </header>
 
-<main class="l-main" id="main">
+<main id="main">
 
-  <!-- ============ キービジュアル ============ -->
+  <!-- ============================================================
+       HERO
+       ============================================================ -->
   <section class="hero" id="top">
-    <div class="hero__media" aria-hidden="true">
-      <div class="hero__pic is-shown" style="background-image:url(images/hero-01.svg)"><img src="images/hero-01.jpg" alt="" onerror="this.remove()"></div>
+    <div class="hero__media" data-parallax="0.18" aria-hidden="true">
+      <div class="hero__pic is-on" style="background-image:url(images/hero-01.svg)"><img src="images/hero-01.jpg" alt="" onerror="this.remove()"></div>
       <div class="hero__pic" style="background-image:url(images/hero-02.svg)"><img src="images/hero-02.jpg" alt="" onerror="this.remove()"></div>
       <div class="hero__pic" style="background-image:url(images/hero-03.svg)"><img src="images/hero-03.jpg" alt="" onerror="this.remove()"></div>
       <div class="hero__veil"></div>
     </div>
 
+    <p class="hero__vert" aria-hidden="true">大分から、荷物と一緒に信頼を運ぶ</p>
+
     <div class="hero__body">
-      <p class="hero__eyebrow"><span class="dot"></span>MKT LLC — Oita, Japan</p>
-      <h1 class="hero__title">
-        <span class="line"><span>信じる力で、</span></span>
-        <span class="line"><span>人と地域の</span></span>
-        <span class="line"><span>未来を支える。</span></span>
+      <h1 class="hero__title" data-anim="mask">
+        <span class="l"><span>信じる力で、</span></span>
+        <span class="l l--in"><span>人と地域の</span></span>
+        <span class="l l--in2"><span>未来を支える。</span></span>
       </h1>
-      <p class="hero__lead">大分から、軽貨物配送を軸に。<br>荷物と一緒に、信頼を届けています。</p>
     </div>
 
-    <p class="hero__side" aria-hidden="true">Delivering trust, since day one.</p>
+    <div class="hero__foot">
+      <a class="hero__scroll" href="#about" aria-label="下へスクロール">
+        <span class="hero__scroll-bar"></span>
+        <span>SCROLL</span>
+      </a>
+      <p class="hero__meta">
+        <span>OITA, JAPAN</span>
+        <span class="hero__clock" id="clock">--:--:--</span>
+        <span>合同会社MKT</span>
+      </p>
+    </div>
 
-    <a class="hero__scroll" href="#about" aria-label="下へスクロール">
-      <span class="hero__scroll-text">SCROLL</span>
-      <span class="hero__scroll-line"></span>
-    </a>
+    <p class="hero__mega" aria-hidden="true">MKT</p>
   </section>
 
-  <!-- ============ 流れるテキスト ============ -->
-  <div class="marquee" aria-hidden="true">
-    <div class="marquee__track">
-      <span>配送で、信頼を運ぶ。<i></i>人に投資する。<i></i>地域とともに育つ。<i></i>MKT LLC<i></i></span>
-      <span>配送で、信頼を運ぶ。<i></i>人に投資する。<i></i>地域とともに育つ。<i></i>MKT LLC<i></i></span>
+  <!-- ============================================================
+       MARQUEE（スクロール速度に反応）
+       ============================================================ -->
+  <div class="mq" id="marquee" aria-hidden="true">
+    <div class="mq__track" id="mqTrack">
+      <span>配送で、信頼を運ぶ。<i>◦</i>人に投資する。<i>◦</i>地域とともに育つ。<i>◦</i></span>
+      <span>配送で、信頼を運ぶ。<i>◦</i>人に投資する。<i>◦</i>地域とともに育つ。<i>◦</i></span>
+      <span>配送で、信頼を運ぶ。<i>◦</i>人に投資する。<i>◦</i>地域とともに育つ。<i>◦</i></span>
     </div>
   </div>
 
-  <!-- ============ 私たちについて ============ -->
-  <section class="sec sec--about" id="about">
-    <div class="sec__inner about">
-      <div class="about__head" data-reveal>
-        <p class="label"><span class="label__en">About us</span><span class="label__jp">私たちについて</span></p>
-        <h2 class="h-display">
-          運ぶ会社である前に、<br>
-          <em>人を信じる会社</em>でありたい。
+  <!-- ============================================================
+       ABOUT ── 写真は左端まで裁ち落とし、見出しは縦書き
+       ============================================================ -->
+  <section class="ab" id="about">
+    <p class="ghost ghost--left" aria-hidden="true">About</p>
+
+    <figure class="ab__media" data-anim="curtain">
+      <div class="ab__frame" style="background-image:url(images/about.svg)">
+        <img src="images/about.jpg" alt="大分市の事務所に集まるMKTのメンバー" data-parallax="0.1" onerror="this.remove()">
+      </div>
+      <!-- 本番写真に差し替えたら「大分市三川上・MKT事務所」等の実際の場所名に戻す -->
+      <figcaption><i>01</i>人を軸にした現場づくり</figcaption>
+    </figure>
+
+    <div class="ab__body">
+      <h2 class="ab__head" data-anim="mask">
+        <span class="l"><span>運ぶ会社である前に、</span></span>
+        <span class="l"><span>人を信じる会社でありたい。</span></span>
+      </h2>
+
+      <div class="ab__text">
+        <p data-anim="up">合同会社MKTは、大分市を拠点にした軽貨物配送の会社です。宅配便、スポット便・チャーター便、リネン配送——大分県内から福岡・久留米まで、地域の毎日を支える荷物を運んでいます。</p>
+        <p data-anim="up" style="--d:.08s">けれど私たちが本当に大切にしているのは、荷物そのものよりも、それを運ぶ「人」です。人を疑うのではなく、まず信じることから関係を始める。頑張った分は、しっかり評価して仲間に還元する。その積み重ねが、結果として現場の強さになると考えています。</p>
+        <p data-anim="up" style="--d:.16s">だから私たちは、配送会社でありながら、人材への投資を経営の中心に置いています。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       NUMBERS ── 濃紺ベタ・巨大数字・桁ロール
+       ============================================================ -->
+  <section class="nm" aria-label="数字で見るMKT">
+    <p class="nm__label" data-anim="up"><span class="rule" data-anim="line"></span>By the numbers<em>2024年度実績</em></p>
+
+    <ul class="nm__list">
+      <li class="nm__item nm__item--lead">
+        <span class="nm__val" data-roll="1"><em>億円</em></span>
+        <span class="nm__key">売上高</span>
+      </li>
+      <li class="nm__item">
+        <span class="nm__val" data-roll="28"><em>名</em></span>
+        <span class="nm__key">従業員数</span>
+      </li>
+      <li class="nm__item">
+        <span class="nm__val" data-roll="6"><em>領域</em></span>
+        <span class="nm__key">事業領域</span>
+      </li>
+      <li class="nm__item">
+        <span class="nm__val" data-roll="5"><em>エリア</em></span>
+        <span class="nm__key">稼働エリア</span>
+      </li>
+    </ul>
+  </section>
+
+  <!-- ============================================================
+       BUSINESS ── 左が固定、右が流れる
+       ============================================================ -->
+  <section class="bz" id="business">
+    <div class="bz__aside">
+      <div class="bz__aside-in">
+        <p class="label" data-anim="up"><span class="rule" data-anim="line"></span>Business</p>
+        <h2 class="h2" data-anim="mask">
+          <span class="l"><span>地域の毎日を、</span></span>
+          <span class="l"><span>止めないために。</span></span>
         </h2>
+        <p class="bz__desc" data-anim="up">軽貨物配送を本業として、大分県内および福岡県久留米エリアで3種類の配送を担っています。個人宅への宅配から、企業間の急ぎの荷物、施設向けの定期便まで。</p>
+        <p class="bz__count" aria-hidden="true"><span id="bzNum">01</span><i>/ 03</i></p>
       </div>
+    </div>
 
-      <div class="about__text" data-reveal style="--d:.1s">
-        <p>合同会社MKTは、大分市を拠点にした軽貨物配送の会社です。宅配便、スポット便・チャーター便、リネン配送——大分県内から福岡・久留米まで、地域の毎日を支える荷物を運んでいます。</p>
-        <p>けれど私たちが本当に大切にしているのは、荷物そのものよりも、それを運ぶ「人」です。人を疑うのではなく、まず信じることから関係を始める。頑張った分は、しっかり評価して仲間に還元する。その積み重ねが、結果として現場の強さになると考えています。</p>
-        <p>だから私たちは、配送会社でありながら、人材への投資を経営の中心に置いています。</p>
-      </div>
-
-      <figure class="about__figure" data-reveal style="--d:.2s">
-        <div class="frame frame--tall" style="background-image:url(images/about.svg)">
-          <img src="images/about.jpg" alt="大分市の事務所に集まるMKTのメンバー" onerror="this.remove()">
+    <ol class="bz__list">
+      <li class="bz__item" data-bz="01">
+        <figure class="bz__media" data-anim="curtain">
+          <div class="bz__frame" style="background-image:url(images/biz-delivery.svg)">
+            <img src="images/biz-delivery.jpg" alt="軽バンで宅配便を配送する様子" data-parallax="0.08" onerror="this.remove()">
+          </div>
+        </figure>
+        <div class="bz__txt">
+          <p class="bz__num">01</p>
+          <h3 data-anim="up">宅配便配送</h3>
+          <p data-anim="up" style="--d:.06s">インターネットで購入された商品を、個人宅へお届けする配送です。専用アプリでルートを組み、1日80〜120個規模を安定して回します。固定ルートが中心のため、地域のお客さまと顔が見える関係を築けるのが特長です。</p>
+          <ul class="tags" data-anim="up" style="--d:.12s"><li>個人宅配送</li><li>固定ルート</li><li>大分市・杵築市・中津市</li></ul>
         </div>
-        <figcaption>大分市三川上・MKT事務所</figcaption>
-      </figure>
+      </li>
 
-      <div class="about__badge" data-reveal style="--d:.3s">
-        <span class="about__badge-en">Since<br>Oita</span>
-      </div>
-    </div>
+      <li class="bz__item" data-bz="02">
+        <figure class="bz__media" data-anim="curtain">
+          <div class="bz__frame" style="background-image:url(images/biz-spot.svg)">
+            <img src="images/biz-spot.jpg" alt="スポット便・チャーター便の積み込み" data-parallax="0.08" onerror="this.remove()">
+          </div>
+        </figure>
+        <div class="bz__txt">
+          <p class="bz__num">02</p>
+          <h3 data-anim="up">スポット便・チャーター便</h3>
+          <p data-anim="up" style="--d:.06s">「今すぐ届けたい」「この荷物だけ専用で運びたい」に応える、単発・貸切の輸送です。企業さまの急な欠品対応や、定期便では拾えないイレギュラーな輸送を、軽貨物ならではの小回りで引き受けます。</p>
+          <ul class="tags" data-anim="up" style="--d:.12s"><li>緊急配送</li><li>貸切輸送</li><li>企業間物流</li></ul>
+        </div>
+      </li>
+
+      <li class="bz__item" data-bz="03">
+        <figure class="bz__media" data-anim="curtain">
+          <div class="bz__frame" style="background-image:url(images/biz-linen.svg)">
+            <img src="images/biz-linen.jpg" alt="リネン配送の様子" data-parallax="0.08" onerror="this.remove()">
+          </div>
+        </figure>
+        <div class="bz__txt">
+          <p class="bz__num">03</p>
+          <h3 data-anim="up">リネン配送</h3>
+          <p data-anim="up" style="--d:.06s">宿泊施設や事業所へ、リネン類を定期的にお届けする配送です。温泉地・別府エリアを中心に、決まった時間に、決まった品質で。観光地の日常を裏側から支えています。</p>
+          <ul class="tags" data-anim="up" style="--d:.12s"><li>定期便</li><li>別府エリア</li><li>施設向け</li></ul>
+        </div>
+      </li>
+    </ol>
   </section>
 
-  <!-- ============ 数字 ============ -->
-  <section class="sec sec--numbers" aria-label="数字で見るMKT">
-    <div class="sec__inner">
-      <p class="label label--center" data-reveal><span class="label__en">By the numbers</span><span class="label__jp">数字で見るMKT</span></p>
-      <ul class="numbers">
-        <li data-reveal>
-          <span class="numbers__value"><span class="count" data-count="1">0</span><em>億円</em></span>
-          <span class="numbers__label">売上高<small>2024年度実績</small></span>
-        </li>
-        <li data-reveal style="--d:.08s">
-          <span class="numbers__value"><span class="count" data-count="28">0</span><em>名</em></span>
-          <span class="numbers__label">従業員数<small>ドライバー・スタッフ</small></span>
-        </li>
-        <li data-reveal style="--d:.16s">
-          <span class="numbers__value"><span class="count" data-count="6">0</span><em>領域</em></span>
-          <span class="numbers__label">事業領域<small>配送を軸に多角展開</small></span>
-        </li>
-        <li data-reveal style="--d:.24s">
-          <span class="numbers__value"><span class="count" data-count="5">0</span><em>エリア</em></span>
-          <span class="numbers__label">稼働エリア<small>大分県・福岡県</small></span>
-        </li>
-      </ul>
-    </div>
-  </section>
-
-  <!-- ============ 事業内容 ============ -->
-  <section class="sec sec--business" id="business">
-    <div class="sec__inner">
-      <div class="sec__head" data-reveal>
-        <p class="label"><span class="label__en">Business</span><span class="label__jp">事業内容</span></p>
-        <h2 class="h-display">地域の毎日を、<em>止めない</em>ために。</h2>
-        <p class="sec__desc">軽貨物配送を本業として、大分県内および福岡県久留米エリアで3種類の配送を担っています。個人宅への宅配から、企業間の急ぎの荷物、施設向けの定期便まで。</p>
-      </div>
-
-      <ol class="biz">
-        <li class="biz__item" data-reveal>
-          <div class="biz__media">
-            <div class="frame" style="background-image:url(images/biz-delivery.svg)">
-              <img src="images/biz-delivery.jpg" alt="軽バンで宅配便を配送する様子" onerror="this.remove()">
-            </div>
-          </div>
-          <div class="biz__body">
-            <span class="biz__num">01</span>
-            <h3>宅配便配送</h3>
-            <p>インターネットで購入された商品を、個人宅へお届けする配送です。専用アプリでルートを組み、1日80〜120個規模を安定して回します。固定ルートが中心のため、地域のお客さまと顔が見える関係を築けるのが特長です。</p>
-            <ul class="tags"><li>個人宅配送</li><li>固定ルート</li><li>大分市・杵築市・中津市</li></ul>
-          </div>
-        </li>
-
-        <li class="biz__item" data-reveal>
-          <div class="biz__media">
-            <div class="frame" style="background-image:url(images/biz-spot.svg)">
-              <img src="images/biz-spot.jpg" alt="スポット便・チャーター便の積み込み" onerror="this.remove()">
-            </div>
-          </div>
-          <div class="biz__body">
-            <span class="biz__num">02</span>
-            <h3>スポット便・チャーター便</h3>
-            <p>「今すぐ届けたい」「この荷物だけ専用で運びたい」に応える、単発・貸切の輸送です。企業さまの急な欠品対応や、定期便では拾えないイレギュラーな輸送を、軽貨物ならではの小回りで引き受けます。</p>
-            <ul class="tags"><li>緊急配送</li><li>貸切輸送</li><li>企業間物流</li></ul>
-          </div>
-        </li>
-
-        <li class="biz__item" data-reveal>
-          <div class="biz__media">
-            <div class="frame" style="background-image:url(images/biz-linen.svg)">
-              <img src="images/biz-linen.jpg" alt="リネン配送の様子" onerror="this.remove()">
-            </div>
-          </div>
-          <div class="biz__body">
-            <span class="biz__num">03</span>
-            <h3>リネン配送</h3>
-            <p>宿泊施設や事業所へ、リネン類を定期的にお届けする配送です。温泉地・別府エリアを中心に、決まった時間に、決まった品質で。観光地の日常を裏側から支えています。</p>
-            <ul class="tags"><li>定期便</li><li>別府エリア</li><li>施設向け</li></ul>
-          </div>
-        </li>
-      </ol>
+  <!-- ============================================================
+       AREA ── 縦書きの県名・静かな面
+       ============================================================ -->
+  <section class="ar" id="area">
+    <div class="ar__head">
+      <p class="label" data-anim="up"><span class="rule" data-anim="line"></span>Area</p>
+      <h2 class="h2" data-anim="mask">
+        <span class="l"><span>大分から、福岡まで。</span></span>
+      </h2>
     </div>
 
-    <!-- 多角化事業 -->
-    <div class="sec__inner sub" id="group">
-      <div class="sub__head" data-reveal>
-        <p class="label"><span class="label__en">Group business</span><span class="label__jp">配送から広がった事業</span></p>
-        <h2 class="h-display">人に投資したら、<em>事業が増えた。</em></h2>
-        <p class="sec__desc">新しい事業をやりたくて増やしたわけではありません。「この人のやりたいこと」を応援していたら、結果として領域が広がりました。Web制作もSNS運用も、もとはドライバーだった仲間のスキルから始まっています。</p>
-      </div>
-
-      <div class="sub__scroller" data-reveal style="--d:.1s">
-        <ul class="sub__list" id="subList">
-          <li class="sub__card">
-            <div class="frame frame--wide" style="background-image:url(images/sub-car.svg)"><img src="images/sub-car.jpg" alt="中古車販売" onerror="this.remove()"></div>
-            <h3>中古車販売</h3>
-            <p>車を見る目と、仕入れの経験を活かして。働くための一台から、生活の一台まで。</p>
-          </li>
-          <li class="sub__card">
-            <div class="frame frame--wide" style="background-image:url(images/sub-web.svg)"><img src="images/sub-web.jpg" alt="Web制作・運用・管理" onerror="this.remove()"></div>
-            <h3>Web制作・運用・管理</h3>
-            <p>社内のサイト運用から始まり、いまは外部案件も。前職のスキルが活きる場所をつくりました。</p>
-          </li>
-          <li class="sub__card">
-            <div class="frame frame--wide" style="background-image:url(images/sub-sns.svg)"><img src="images/sub-sns.jpg" alt="SNS運用・管理" onerror="this.remove()"></div>
-            <h3>SNS運用・管理</h3>
-            <p>発信を継続する仕組みごと引き受けます。地域企業の「続かない」を解消する運用支援。</p>
-          </li>
-          <li class="sub__card">
-            <div class="frame frame--wide" style="background-image:url(images/sub-beauty.svg)"><img src="images/sub-beauty.jpg" alt="美容業" onerror="this.remove()"></div>
-            <h3>美容業</h3>
-            <p>人が輝く場を、別の形でも。地域の暮らしに近い場所での事業です。</p>
-          </li>
-          <li class="sub__card">
-            <div class="frame frame--wide" style="background-image:url(images/sub-food.svg)"><img src="images/sub-food.jpg" alt="飲食業" onerror="this.remove()"></div>
-            <h3>飲食業</h3>
-            <p>人が集まる場所をつくること。地域の課題を、ビジネスで解いていく挑戦のひとつ。</p>
-          </li>
+    <div class="ar__grid">
+      <article class="ar__card" data-anim="up">
+        <p class="ar__pref" aria-hidden="true">大分県</p>
+        <p class="ar__en">Oita</p>
+        <ul class="ar__cities">
+          <li>大分市</li><li>別府市</li><li>杵築市</li><li>中津市</li>
         </ul>
-      </div>
-
-      <div class="sub__nav" data-reveal>
-        <button class="arrow" id="subPrev" aria-label="前へ"></button>
-        <div class="sub__bar"><span id="subBar"></span></div>
-        <button class="arrow arrow--next" id="subNext" aria-label="次へ"></button>
-      </div>
+        <p class="ar__note">地場配送の案件が豊富なエリア。固定ルートが多く、稼働が安定しやすいのが特長です。宅配・リネン配送ともにここが主戦場になります。</p>
+      </article>
+      <article class="ar__card" data-anim="up" style="--d:.1s">
+        <p class="ar__pref" aria-hidden="true">福岡県</p>
+        <p class="ar__en">Fukuoka</p>
+        <ul class="ar__cities">
+          <li>久留米市</li>
+        </ul>
+        <p class="ar__note">高回転・近距離の都市型配送エリア。不在の少ない企業向けルートも含め、効率を設計しやすい構造になっています。</p>
+      </article>
     </div>
   </section>
 
-  <!-- ============ エリア ============ -->
-  <section class="sec sec--area" id="area">
-    <div class="sec__inner area">
-      <div class="area__head" data-reveal>
-        <p class="label"><span class="label__en">Area</span><span class="label__jp">稼働エリア</span></p>
-        <h2 class="h-display">大分から、<br>福岡まで。</h2>
-        <p class="sec__desc">大分県内の地場配送を中心に、福岡・久留米の都市型配送まで。地域ごとに性格の違うルートを持っていることが、安定した稼働と提案の幅につながっています。</p>
+  <!-- ============================================================
+       GROUP ── 縦スクロールで横に流れる
+       ============================================================ -->
+  <section class="hs" id="group">
+    <div class="hs__pin">
+      <div class="hs__head">
+        <p class="label" data-anim="up"><span class="rule" data-anim="line"></span>Group business</p>
+        <h2 class="h2 h2--sm" data-anim="mask">
+          <span class="l"><span>人に投資したら、</span></span>
+          <span class="l"><span>事業が増えた。</span></span>
+        </h2>
+        <p class="hs__desc" data-anim="up">新しい事業をやりたくて増やしたわけではありません。「この人のやりたいこと」を応援していたら、結果として領域が広がりました。Web制作もSNS運用も、もとはドライバーだった仲間のスキルから始まっています。</p>
       </div>
 
-      <div class="area__grid">
-        <div class="area__card" data-reveal>
-          <p class="area__pref"><span class="en">Oita</span>大分県</p>
-          <ul class="area__cities">
-            <li>大分市</li><li>別府市</li><li>杵築市</li><li>中津市</li>
-          </ul>
-          <p class="area__note">地場配送の案件が豊富なエリア。固定ルートが多く、稼働が安定しやすいのが特長です。宅配・リネン配送ともにここが主戦場になります。</p>
-        </div>
-        <div class="area__card" data-reveal style="--d:.1s">
-          <p class="area__pref"><span class="en">Fukuoka</span>福岡県</p>
-          <ul class="area__cities">
-            <li>久留米市</li>
-          </ul>
-          <p class="area__note">高回転・近距離の都市型配送エリア。不在の少ない企業向けルートも含め、効率を設計しやすい構造になっています。</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ 理念 ============ -->
-  <section class="sec sec--philosophy" id="philosophy">
-    <div class="sec__inner">
-      <p class="label label--center label--light" data-reveal><span class="label__en">Philosophy</span><span class="label__jp">私たちの理念</span></p>
-
-      <div class="phil">
-        <article class="phil__block" data-reveal>
-          <p class="phil__key">Mission</p>
-          <h3 class="phil__statement">信じる力で、<br>人と地域の未来を支える。</h3>
-          <p class="phil__text">「信頼をベースにした働く環境」をつくり、仲間と地域の可能性を引き出すこと。配送事業に限らず、どの領域でも大切にしたいのは「人」です。人が育ち、人が輝く場をつくることが、結果的に地域や社会への貢献につながると信じています。</p>
-          <ul class="phil__points">
-            <li>目の前の誰かを助けることをためらわない</li>
-            <li>関わる人すべてに信頼とリターンを返す</li>
-            <li>挑戦する人にチャンスを与え続ける</li>
-          </ul>
+      <div class="hs__track" id="hsTrack">
+        <article class="hs__card">
+          <div class="hs__frame" style="background-image:url(images/sub-car.svg)"><img src="images/sub-car.jpg" alt="中古車販売" onerror="this.remove()"></div>
+          <p class="hs__idx">01</p>
+          <h3>中古車販売</h3>
+          <p>車を見る目と、仕入れの経験を活かして。働くための一台から、生活の一台まで。</p>
         </article>
-
-        <article class="phil__block" data-reveal style="--d:.1s">
-          <p class="phil__key">Vision</p>
-          <h3 class="phil__statement">思いやりでつながる<br>経済をつくる。</h3>
-          <p class="phil__text">目指すのは、利益だけを追うのではなく、人と人との信頼で成り立つ経済圏です。事業の軸は軽バン配送から始まりましたが、これはゴールではありません。働く人の夢や可能性を支えられる「土壌」を、これからも広げていきます。やさしさを強さに変えられるチームで、地域の未来を支えていくために。</p>
+        <article class="hs__card">
+          <div class="hs__frame" style="background-image:url(images/sub-web.svg)"><img src="images/sub-web.jpg" alt="Web制作・運用・管理" onerror="this.remove()"></div>
+          <p class="hs__idx">02</p>
+          <h3>Web制作・運用・管理</h3>
+          <p>社内のサイト運用から始まり、いまは外部案件も。前職のスキルが活きる場所をつくりました。</p>
+        </article>
+        <article class="hs__card">
+          <div class="hs__frame" style="background-image:url(images/sub-sns.svg)"><img src="images/sub-sns.jpg" alt="SNS運用・管理" onerror="this.remove()"></div>
+          <p class="hs__idx">03</p>
+          <h3>SNS運用・管理</h3>
+          <p>発信を継続する仕組みごと引き受けます。地域企業の「続かない」を解消する運用支援。</p>
+        </article>
+        <article class="hs__card">
+          <div class="hs__frame" style="background-image:url(images/sub-beauty.svg)"><img src="images/sub-beauty.jpg" alt="美容業" onerror="this.remove()"></div>
+          <p class="hs__idx">04</p>
+          <h3>美容業</h3>
+          <p>人が輝く場を、別の形でも。地域の暮らしに近い場所での事業です。</p>
+        </article>
+        <article class="hs__card">
+          <div class="hs__frame" style="background-image:url(images/sub-food.svg)"><img src="images/sub-food.jpg" alt="飲食業" onerror="this.remove()"></div>
+          <p class="hs__idx">05</p>
+          <h3>飲食業</h3>
+          <p>人が集まる場所をつくること。地域の課題を、ビジネスで解いていく挑戦のひとつ。</p>
         </article>
       </div>
 
-      <div class="policy" data-reveal>
-        <p class="policy__title"><span class="en">Policy</span>経営方針</p>
-        <div class="policy__list" id="policyList">
-          <details class="policy__item" open>
-            <summary><span class="policy__num">01</span><span class="policy__label">信頼をベースにした組織づくり</span></summary>
-            <div class="policy__body"><p>人を疑うのではなく、まず信じることから関係を始める。だからこそ上下関係ではなく、「チーム」としての協力と対話を重視します。信頼関係が強い現場には、自発性と成長が生まれます。</p></div>
-          </details>
-          <details class="policy__item">
-            <summary><span class="policy__num">02</span><span class="policy__label">利益の再分配と仲間への還元</span></summary>
-            <div class="policy__body"><p>会社が得た利益は、仲間に還元し、挑戦の土台として使う。個人の生活が安定し、夢に向かってチャレンジできる環境をつくることが、結果的に会社の持続的成長につながると考えています。</p></div>
-          </details>
-          <details class="policy__item">
-            <summary><span class="policy__num">03</span><span class="policy__label">事業の多角化と地域貢献</span></summary>
-            <div class="policy__body"><p>軽バン配送事業を起点としながら、新規事業にも積極的に挑戦します。地域の課題をビジネスで解決し、地域に必要とされる会社へと進化し続けることが目標です。</p></div>
-          </details>
-          <details class="policy__item">
-            <summary><span class="policy__num">04</span><span class="policy__label">「優しさ＝弱さ」ではなく「優しさ＝戦略」</span></summary>
-            <div class="policy__body"><p>人を思いやる文化は、実は会社にとって最大の競争優位です。働きやすさと誇りを感じられる現場をつくることで、自然と人が集まり、結果として強いチームが生まれます。</p></div>
-          </details>
-        </div>
+      <div class="hs__bar"><span id="hsBar"></span></div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       PHILOSOPHY ── 画面固定・スクロール進行度で切り替わる
+       ============================================================ -->
+  <section class="ph" id="philosophy">
+    <div class="ph__pin">
+      <p class="ph__label">Philosophy</p>
+
+      <article class="ph__panel is-on" data-panel="0">
+        <p class="ph__key">Mission</p>
+        <h3 class="ph__st">信じる力で、<br>人と地域の未来を支える。</h3>
+        <p class="ph__tx">「信頼をベースにした働く環境」をつくり、仲間と地域の可能性を引き出すこと。配送事業に限らず、どの領域でも大切にしたいのは「人」です。人が育ち、人が輝く場をつくることが、結果的に地域や社会への貢献につながると信じています。</p>
+        <ul class="ph__pt">
+          <li>目の前の誰かを助けることをためらわない</li>
+          <li>関わる人すべてに信頼とリターンを返す</li>
+          <li>挑戦する人にチャンスを与え続ける</li>
+        </ul>
+      </article>
+
+      <article class="ph__panel" data-panel="1">
+        <p class="ph__key">Vision</p>
+        <h3 class="ph__st">思いやりでつながる<br>経済をつくる。</h3>
+        <p class="ph__tx">目指すのは、利益だけを追うのではなく、人と人との信頼で成り立つ経済圏です。事業の軸は軽バン配送から始まりましたが、これはゴールではありません。働く人の夢や可能性を支えられる「土壌」を、これからも広げていきます。やさしさを強さに変えられるチームで、地域の未来を支えていくために。</p>
+      </article>
+
+      <div class="ph__dots" aria-hidden="true">
+        <span class="is-on"></span><span></span>
       </div>
     </div>
   </section>
 
-  <!-- ============ 代表メッセージ ============ -->
-  <section class="sec sec--message" id="message">
-    <div class="sec__inner message">
-      <figure class="message__figure" data-reveal>
-        <div class="frame frame--portrait" style="background-image:url(images/message.svg)">
-          <img src="images/message.jpg" alt="合同会社MKT 代表 森下富弘" onerror="this.remove()">
-        </div>
-      </figure>
-      <div class="message__body" data-reveal style="--d:.1s">
-        <p class="label"><span class="label__en">Message</span><span class="label__jp">代表メッセージ</span></p>
-        <h2 class="h-display">誰かの役に立ちたい。<br>それだけが、原点です。</h2>
-        <div class="message__text">
-          <p>私は昔から「困っている人を見過ごせない」性分です。誰かが悩んでいれば、つい手を差し伸べてしまう。たとえ裏切られたとしても、もう一度、自分から信じることを選びます。それが私の生き方であり、この生き方を教えてくれたのは母でした。</p>
-          <p>この事業を始めた理由も、まさに「誰かの役に立ちたい」という想いからでした。軽バン配送というフィールドで、ただ物を運ぶのではなく、働く人が誇りを持てる環境をつくる。利益は、まず仲間に還元する。それが私の信念です。</p>
-          <p>けれど、ここで終わるつもりはありません。この配送事業を礎に、地域や仲間の暮らしをもっと豊かにできるよう、さまざまな新規事業にも挑戦していきます。その先にあるのは、「私に関わるすべての人が幸せになる循環」をつくることです。</p>
-        </div>
-        <p class="message__sign"><small>合同会社MKT 代表</small><strong>森下 富弘</strong></p>
-      </div>
+  <!-- ============================================================
+       POLICY
+       ============================================================ -->
+  <section class="pl" aria-label="経営方針">
+    <div class="pl__head">
+      <p class="label" data-anim="up"><span class="rule" data-anim="line"></span>Policy</p>
+      <h2 class="h2 h2--sm" data-anim="mask"><span class="l"><span>人を信じ、人に投資する。</span></span></h2>
+    </div>
+    <div class="pl__list">
+      <details class="pl__item" open>
+        <summary><i>01</i><span>信頼をベースにした組織づくり</span></summary>
+        <div class="pl__body"><p>人を疑うのではなく、まず信じることから関係を始める。だからこそ上下関係ではなく、「チーム」としての協力と対話を重視します。信頼関係が強い現場には、自発性と成長が生まれます。</p></div>
+      </details>
+      <details class="pl__item">
+        <summary><i>02</i><span>利益の再分配と仲間への還元</span></summary>
+        <div class="pl__body"><p>会社が得た利益は、仲間に還元し、挑戦の土台として使う。個人の生活が安定し、夢に向かってチャレンジできる環境をつくることが、結果的に会社の持続的成長につながると考えています。</p></div>
+      </details>
+      <details class="pl__item">
+        <summary><i>03</i><span>事業の多角化と地域貢献</span></summary>
+        <div class="pl__body"><p>軽バン配送事業を起点としながら、新規事業にも積極的に挑戦します。地域の課題をビジネスで解決し、地域に必要とされる会社へと進化し続けることが目標です。</p></div>
+      </details>
+      <details class="pl__item">
+        <summary><i>04</i><span>「優しさ＝弱さ」ではなく「優しさ＝戦略」</span></summary>
+        <div class="pl__body"><p>人を思いやる文化は、実は会社にとって最大の競争優位です。働きやすさと誇りを感じられる現場をつくることで、自然と人が集まり、結果として強いチームが生まれます。</p></div>
+      </details>
     </div>
   </section>
 
-  <!-- ============ 人と組織 ============ -->
-  <section class="sec sec--people" id="people">
-    <div class="sec__inner people">
-      <div class="people__head" data-reveal>
-        <p class="label"><span class="label__en">People</span><span class="label__jp">人と組織</span></p>
-        <h2 class="h-display">教育ではなく、<em>共育</em>。</h2>
-      </div>
+  <!-- ============================================================
+       MESSAGE ── 引用主体・写真は使わずタイポで持たせる
+       ============================================================ -->
+  <section class="ms" id="message">
+    <p class="ghost ghost--right" aria-hidden="true">Message</p>
 
-      <div class="people__cols">
-        <div class="people__col" data-reveal>
-          <h3>主体性を育てる</h3>
-          <p>自ら考え、動ける人を育てるために、まずは小さな成功体験を重ねる環境を用意します。「やってみたい」を応援し、任せてみる。その経験が、自信と責任感を育てていきます。</p>
-        </div>
-        <div class="people__col" data-reveal style="--d:.08s">
-          <h3>安心して相談できる風土</h3>
-          <p>失敗を責めるのではなく、「どうすれば次に活かせるか」を一緒に考える文化を育てています。だからこそ、未経験からスタートした人も着実にステップアップしていけます。</p>
-        </div>
-        <div class="people__col" data-reveal style="--d:.16s">
-          <h3>長期的な視点での成長支援</h3>
-          <p>目の前のスキルだけでなく、将来のキャリアや人生設計も一緒に考えます。独立を目指す人、家庭との両立を重視したい人、それぞれの目標に合わせた支援を行っています。</p>
-        </div>
-      </div>
+    <div class="ms__in">
+      <p class="label" data-anim="up"><span class="rule" data-anim="line"></span>Message</p>
 
-      <div class="people__cta" data-reveal>
-        <div class="people__cta-media">
-          <div class="frame frame--wide" style="background-image:url(images/people.svg)">
-            <img src="images/people.jpg" alt="MKTのドライバーとスタッフ" onerror="this.remove()">
+      <blockquote class="ms__quote" data-anim="mask">
+        <span class="l"><span>誰かの役に立ちたい。</span></span>
+        <span class="l"><span>それだけが、原点です。</span></span>
+      </blockquote>
+
+      <div class="ms__cols">
+        <div class="ms__portrait" data-anim="curtain">
+          <div class="ms__frame" style="background-image:url(images/message.svg)">
+            <img src="images/message.jpg" alt="合同会社MKT 代表 森下富弘" onerror="this.remove()">
           </div>
+          <p class="ms__sign"><i>合同会社MKT 代表</i><b>森下 富弘</b></p>
         </div>
-        <div class="people__cta-body">
-          <p class="people__cta-lead">ドライバーとして働く／独立を目指す方へ</p>
-          <h3 class="h-display">仲間を、<br>募集しています。</h3>
-          <p>実際に働く人の声、案件やエリアの詳細、収入の考え方は採用特設サイトにまとめています。「話を聞くだけ」も歓迎です。</p>
-          <a class="btn btn--amber btn--lg" href="https://mkt-company.studio.site/" target="_blank" rel="noopener">採用特設サイトへ<span class="btn__arrow"></span></a>
+
+        <div class="ms__text">
+          <p data-anim="up">私は昔から「困っている人を見過ごせない」性分です。誰かが悩んでいれば、つい手を差し伸べてしまう。たとえ裏切られたとしても、もう一度、自分から信じることを選びます。それが私の生き方であり、この生き方を教えてくれたのは母でした。</p>
+          <p data-anim="up" style="--d:.08s">この事業を始めた理由も、まさに「誰かの役に立ちたい」という想いからでした。軽バン配送というフィールドで、ただ物を運ぶのではなく、働く人が誇りを持てる環境をつくる。利益は、まず仲間に還元する。それが私の信念です。</p>
+          <p data-anim="up" style="--d:.16s">けれど、ここで終わるつもりはありません。この配送事業を礎に、地域や仲間の暮らしをもっと豊かにできるよう、さまざまな新規事業にも挑戦していきます。その先にあるのは、「私に関わるすべての人が幸せになる循環」をつくることです。</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ============ 会社概要 ============ -->
-  <section class="sec sec--company" id="company">
-    <div class="sec__inner company">
-      <div class="company__head" data-reveal>
-        <p class="label"><span class="label__en">Company</span><span class="label__jp">会社概要</span></p>
-        <h2 class="h-display">会社情報</h2>
-      </div>
-      <dl class="company__table" data-reveal style="--d:.1s">
-        <div><dt>企業名</dt><dd>合同会社MKT</dd></div>
-        <div><dt>代表者</dt><dd>森下 富弘</dd></div>
-        <div><dt>所在地</dt><dd>〒870-0143<br>大分県大分市三川上2丁目5番14号 泉アパート1F</dd></div>
-        <div><dt>電話番号</dt><dd><a href="tel:0975944466">097-594-4466</a></dd></div>
-        <div><dt>事業内容</dt><dd>軽貨物配送（宅配便・スポット便・チャーター便・リネン配送）／中古車販売／Web制作・運用・管理／SNS運用・管理／美容業／飲食業</dd></div>
-        <div><dt>従業員数</dt><dd>28名</dd></div>
-        <div><dt>売上高</dt><dd>1億円（2024年度実績）</dd></div>
-        <div><dt>稼働エリア</dt><dd>大分県（大分市・別府市・杵築市・中津市）／福岡県（久留米市）</dd></div>
-        <div><dt>関連サイト</dt><dd><a href="https://mkt-company.studio.site/" target="_blank" rel="noopener">採用特設サイト</a></dd></div>
-      </dl>
+  <!-- ============================================================
+       PEOPLE ── 階段状に配置
+       ============================================================ -->
+  <section class="pp" id="people">
+    <div class="pp__head">
+      <p class="label" data-anim="up"><span class="rule" data-anim="line"></span>People</p>
+      <h2 class="h2" data-anim="mask"><span class="l"><span>教育ではなく、共育。</span></span></h2>
     </div>
+
+    <div class="pp__cols">
+      <article class="pp__col" data-anim="up">
+        <p class="pp__idx">01</p>
+        <h3>主体性を育てる</h3>
+        <p>自ら考え、動ける人を育てるために、まずは小さな成功体験を重ねる環境を用意します。「やってみたい」を応援し、任せてみる。その経験が、自信と責任感を育てていきます。</p>
+      </article>
+      <article class="pp__col" data-anim="up" style="--d:.1s">
+        <p class="pp__idx">02</p>
+        <h3>安心して相談できる風土</h3>
+        <p>失敗を責めるのではなく、「どうすれば次に活かせるか」を一緒に考える文化を育てています。だからこそ、未経験からスタートした人も着実にステップアップしていけます。</p>
+      </article>
+      <article class="pp__col" data-anim="up" style="--d:.2s">
+        <p class="pp__idx">03</p>
+        <h3>長期的な視点での成長支援</h3>
+        <p>目の前のスキルだけでなく、将来のキャリアや人生設計も一緒に考えます。独立を目指す人、家庭との両立を重視したい人、それぞれの目標に合わせた支援を行っています。</p>
+      </article>
+    </div>
+
+    <a class="pp__cta" href="https://mkt-company.studio.site/" target="_blank" rel="noopener" data-cursor="VIEW" data-anim="up">
+      <div class="pp__cta-media">
+        <div class="pp__frame" style="background-image:url(images/people.svg)">
+          <img src="images/people.jpg" alt="" data-parallax="0.06" onerror="this.remove()">
+        </div>
+      </div>
+      <div class="pp__cta-body">
+        <p class="pp__cta-lead">ドライバーとして働く／独立を目指す方へ</p>
+        <p class="pp__cta-h">仲間を、募集しています。</p>
+        <p class="pp__cta-tx">働く人の声、案件やエリアの詳細、収入の考え方は採用特設サイトにまとめています。「話を聞くだけ」も歓迎です。</p>
+        <span class="pp__cta-link">採用特設サイトへ<i></i></span>
+      </div>
+    </a>
   </section>
 
-  <!-- ============ お問い合わせ ============ -->
-  <section class="sec sec--contact" id="contact">
-    <div class="sec__inner contact">
-      <div class="contact__head" data-reveal>
-        <p class="label label--light"><span class="label__en">Contact</span><span class="label__jp">お問い合わせ</span></p>
-        <h2 class="h-display">配送のご依頼も、<br>ご相談だけでも。</h2>
-        <p class="contact__lead">スポット便・チャーター便・定期便のご依頼、業務提携のご相談、取材のお申し込みなど。お気軽にご連絡ください。</p>
-        <a class="contact__tel" href="tel:0975944466">
-          <span class="contact__tel-label">お電話でのお問い合わせ</span>
-          <span class="contact__tel-num">097-594-4466</span>
-        </a>
-      </div>
-
-      <form class="contact__form" data-reveal style="--d:.1s" action="#" method="post" novalidate>
-        <div class="field">
-          <label for="f-name">お名前<span class="req">必須</span></label>
-          <input type="text" id="f-name" name="name" required autocomplete="name" placeholder="大分 太郎">
-        </div>
-        <div class="field">
-          <label for="f-company">会社名</label>
-          <input type="text" id="f-company" name="company" autocomplete="organization" placeholder="株式会社〇〇">
-        </div>
-        <div class="field">
-          <label for="f-email">メールアドレス<span class="req">必須</span></label>
-          <input type="email" id="f-email" name="email" required autocomplete="email" placeholder="info@example.com">
-        </div>
-        <div class="field">
-          <label for="f-tel">電話番号</label>
-          <input type="tel" id="f-tel" name="tel" autocomplete="tel" placeholder="000-0000-0000">
-        </div>
-        <div class="field field--full">
-          <label for="f-type">お問い合わせ種別</label>
-          <select id="f-type" name="type">
-            <option>配送のご依頼・お見積り</option>
-            <option>業務提携のご相談</option>
-            <option>採用について</option>
-            <option>取材・メディア</option>
-            <option>その他</option>
-          </select>
-        </div>
-        <div class="field field--full">
-          <label for="f-body">お問い合わせ内容<span class="req">必須</span></label>
-          <textarea id="f-body" name="body" rows="6" required placeholder="ご相談内容をご記入ください"></textarea>
-        </div>
-        <button class="btn btn--amber btn--lg btn--submit" type="submit">送信する<span class="btn__arrow"></span></button>
-        <p class="contact__note">※ 送信先の設定が必要です（README参照）。設定までは上記のお電話をご利用ください。</p>
-      </form>
+  <!-- ============================================================
+       COMPANY ── 罫線のみ・余白過多
+       ============================================================ -->
+  <section class="cp" id="company">
+    <div class="cp__head">
+      <p class="label" data-anim="up"><span class="rule" data-anim="line"></span>Company</p>
+      <h2 class="h2 h2--sm" data-anim="mask"><span class="l"><span>会社情報</span></span></h2>
     </div>
+
+    <dl class="cp__table">
+      <div data-anim="up"><dt>企業名</dt><dd>合同会社MKT</dd></div>
+      <div data-anim="up"><dt>代表者</dt><dd>森下 富弘</dd></div>
+      <div data-anim="up"><dt>所在地</dt><dd>〒870-0143<br>大分県大分市三川上2丁目5番14号 泉アパート1F</dd></div>
+      <div data-anim="up"><dt>電話番号</dt><dd><a href="tel:0975944466">097-594-4466</a></dd></div>
+      <div data-anim="up"><dt>事業内容</dt><dd>軽貨物配送（宅配便・スポット便・チャーター便・リネン配送）／中古車販売／Web制作・運用・管理／SNS運用・管理／美容業／飲食業</dd></div>
+      <div data-anim="up"><dt>従業員数</dt><dd>28名</dd></div>
+      <div data-anim="up"><dt>売上高</dt><dd>1億円（2024年度実績）</dd></div>
+      <div data-anim="up"><dt>稼働エリア</dt><dd>大分県（大分市・別府市・杵築市・中津市）／福岡県（久留米市）</dd></div>
+      <div data-anim="up"><dt>関連サイト</dt><dd><a href="https://mkt-company.studio.site/" target="_blank" rel="noopener">採用特設サイト ↗</a></dd></div>
+    </dl>
+  </section>
+
+  <!-- ============================================================
+       CONTACT
+       ============================================================ -->
+  <section class="ct" id="contact">
+    <div class="ct__head">
+      <p class="label label--lt" data-anim="up"><span class="rule" data-anim="line"></span>Contact</p>
+      <h2 class="ct__h" data-anim="mask">
+        <span class="l"><span>配送のご依頼も、</span></span>
+        <span class="l"><span>ご相談だけでも。</span></span>
+      </h2>
+      <p class="ct__lead" data-anim="up">スポット便・チャーター便・定期便のご依頼、業務提携のご相談、取材のお申し込みなど。お気軽にご連絡ください。</p>
+      <a class="ct__tel" href="tel:0975944466" data-cursor="発信" data-anim="up">
+        <i>TEL</i><span>097-594-4466</span>
+      </a>
+    </div>
+
+    <form class="ct__form" data-anim="up" action="#" method="post" novalidate>
+      <div class="fd"><label for="f-name">お名前<em>必須</em></label><input type="text" id="f-name" name="name" required autocomplete="name" placeholder="大分 太郎"></div>
+      <div class="fd"><label for="f-company">会社名</label><input type="text" id="f-company" name="company" autocomplete="organization" placeholder="株式会社〇〇"></div>
+      <div class="fd"><label for="f-email">メールアドレス<em>必須</em></label><input type="email" id="f-email" name="email" required autocomplete="email" placeholder="info@example.com"></div>
+      <div class="fd"><label for="f-tel">電話番号</label><input type="tel" id="f-tel" name="tel" autocomplete="tel" placeholder="000-0000-0000"></div>
+      <div class="fd fd--full"><label for="f-type">お問い合わせ種別</label>
+        <select id="f-type" name="type">
+          <option>配送のご依頼・お見積り</option>
+          <option>業務提携のご相談</option>
+          <option>採用について</option>
+          <option>取材・メディア</option>
+          <option>その他</option>
+        </select>
+      </div>
+      <div class="fd fd--full"><label for="f-body">お問い合わせ内容<em>必須</em></label><textarea id="f-body" name="body" rows="5" required placeholder="ご相談内容をご記入ください"></textarea></div>
+      <button class="ct__submit" type="submit" data-cursor="送信">送信する<i></i></button>
+      <p class="ct__note">※ 送信先の設定が必要です（README参照）。設定までは上記のお電話をご利用ください。</p>
+    </form>
   </section>
 
 </main>
 
-<!-- ============ フッター ============ -->
-<footer class="l-footer">
-  <div class="l-footer__inner">
-    <div class="l-footer__brand">
-      <a class="l-footer__logo" href="#top">
-        <img src="images/logo.svg" alt="合同会社MKT" onerror="this.remove()">
-        <span><strong>MKT</strong><small>合同会社エムケーティー</small></span>
-      </a>
-      <p class="l-footer__mission">信じる力で、<br>人と地域の未来を支える。</p>
+<!-- ============================================================
+     FOOTER
+     ============================================================ -->
+<footer class="ft">
+  <div class="ft__in">
+    <div class="ft__brand">
+      <p class="ft__mission">信じる力で、<br>人と地域の未来を支える。</p>
       <address>
         〒870-0143 大分県大分市三川上2丁目5番14号 泉アパート1F<br>
         TEL <a href="tel:0975944466">097-594-4466</a>
       </address>
     </div>
-    <nav class="l-footer__nav" aria-label="フッターナビゲーション">
+    <nav class="ft__nav" aria-label="フッターナビゲーション">
       <ul>
         <li><a href="#about">私たちについて</a></li>
         <li><a href="#business">事業内容</a></li>
         <li><a href="#area">稼働エリア</a></li>
-        <li><a href="#philosophy">理念</a></li>
+        <li><a href="#group">グループ事業</a></li>
       </ul>
       <ul>
+        <li><a href="#philosophy">理念</a></li>
         <li><a href="#message">代表メッセージ</a></li>
         <li><a href="#people">人と組織</a></li>
         <li><a href="#company">会社概要</a></li>
-        <li><a href="#contact">お問い合わせ</a></li>
       </ul>
       <ul>
-        <li><a href="https://mkt-company.studio.site/" target="_blank" rel="noopener">採用特設サイト</a></li>
+        <li><a href="#contact">お問い合わせ</a></li>
+        <li><a href="https://mkt-company.studio.site/" target="_blank" rel="noopener">採用特設サイト ↗</a></li>
       </ul>
     </nav>
   </div>
-  <p class="l-footer__copy"><small>&copy; MKT LLC. All Rights Reserved.</small></p>
+  <p class="ft__mega" aria-hidden="true">MKT</p>
+  <p class="ft__copy">&copy; MKT LLC. All Rights Reserved.</p>
 </footer>
 
 <script src="js/main.js"></script>
