@@ -394,13 +394,20 @@ body.is-nav .burger span:nth-child(2){ transform:translateY(-3px) rotate(-30deg)
 .nm__key{ display:block; margin-top:16px; font-size:13px; letter-spacing:.12em; color:rgba(247,242,232,.66); }
 
 /* 桁ロール */
-.roll{ display:inline-flex; overflow:hidden; height:.86em; }
+/* クリップ窓は1桁ぶん（1em）。桁の列はその20倍の高さを持ち、translateYで送る。
+   ★align-items:flex-start と flex:none は必須。
+     これが無いと列が flex で窓の高さ(1em)まで縮められ、translateY の % が
+     「20桁ぶん」ではなく「1桁ぶん」に対して効いてしまい、桁が途中で止まって割れる */
+.roll{ display:inline-flex; align-items:flex-start; overflow:hidden; height:1em; }
 .roll__col{
-  display:flex; flex-direction:column;
+  display:flex; flex-direction:column; flex:none;
   transform:translateY(0);
   transition:transform 1.7s var(--e-io);
 }
-.roll__col b{ font-weight:inherit; height:.86em; line-height:.86em; display:block; }
+.roll__col b{
+  font-weight:inherit; height:1em; line-height:1;
+  display:flex; align-items:center; justify-content:center;
+}
 
 /* ==========================================================================
    BUSINESS ── 左固定・右が流れる
